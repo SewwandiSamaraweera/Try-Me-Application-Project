@@ -5,8 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    tools:context=".SignUp">
+    android:background="#FBFBFB"
+    tools:context=".AdminSignUp">
 
     <TextView
         android:id="@+id/textView19"
@@ -118,7 +118,7 @@
         android:layout_width="255dp"
         android:layout_height="45dp"
         android:layout_marginBottom="152dp"
-        android:text="Sign Up Here"
+        android:text="Admin Sign Up"
         android:textAlignment="center"
         android:textColor="#A525BD"
         android:textSize="34sp"

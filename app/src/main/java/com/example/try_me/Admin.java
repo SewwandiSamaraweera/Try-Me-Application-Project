@@ -1,5 +1,6 @@
 package com.example.try_me;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -12,64 +13,72 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
-public class Profile extends AppCompatActivity {
+public class Admin extends AppCompatActivity {
 
-    private Button button2;
-    private Button button3;
-    private Button button15;
+    private Button button9;
+    private Button button10;
+    private Button button11;
 
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_profile);
-        button2=findViewById(R.id.button7);
-        button2.setOnClickListener(new View.OnClickListener() {
+        setContentView(R.layout.activity_admin);
+
+        button9=findViewById(R.id.btnsign);
+        button9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Profile.this,LoginPage.class);
-                startActivity(intent);
-            }
-        });
-        button3=findViewById(R.id.btnsign);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(Profile.this,SignUp.class);
+                Intent intent=new Intent(Admin.this,AdminSignUp.class);
                 startActivity(intent);
             }
         });
 
-        button15=findViewById(R.id.button);
-        button15.setOnClickListener(new View.OnClickListener() {
+        button10=findViewById(R.id.btnlogin);
+        button10.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent=new Intent(Profile.this,ShippingAddress.class);
+                Intent intent=new Intent(Admin.this,AdminLogin.class);
                 startActivity(intent);
             }
         });
 
-        ImageButton imageButton4 = findViewById(R.id.imageButton7);
-        imageButton4.setOnClickListener(new View.OnClickListener() {
+        button11=findViewById(R.id.button10);
+        button11.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Profile.this,Home.class));
+                Intent intent=new Intent(Admin.this,AdminLogin.class);
+                startActivity(intent);
             }
         });
-        ImageButton imageButton5 = findViewById(R.id.imageButton10);
-        imageButton5.setOnClickListener(new View.OnClickListener() {
+
+        ImageButton imageButton12 = findViewById(R.id.imageButton7);
+        imageButton12.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Profile.this,Cart.class));
+                startActivity(new Intent(Admin.this,Home.class));
             }
         });
-        ImageButton imageButton6 = findViewById(R.id.imageButton12);
-        imageButton6.setOnClickListener(new View.OnClickListener() {
+
+        ImageButton imageButton13 = findViewById(R.id.imageButton10);
+        imageButton13.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(Profile.this,Notification.class));
+                startActivity(new Intent(Admin.this,Cart.class));
             }
         });
+
+        ImageButton imageButton14 = findViewById(R.id.imageButton12);
+        imageButton14.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Admin.this,Notification.class));
+            }
+        });
+
+
+
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());

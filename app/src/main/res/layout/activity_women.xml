@@ -25,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="16dp"
                 android:background="#0D0000"
-                android:text="For Woman"
+                android:text="For Women"
                 android:textAlignment="center"
                 android:textColor="#FAF8F8"
                 android:textSize="34sp"

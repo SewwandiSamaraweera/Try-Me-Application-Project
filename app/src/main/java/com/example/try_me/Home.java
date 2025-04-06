@@ -3,6 +3,7 @@ package com.example.try_me;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 
 import androidx.activity.EdgeToEdge;
@@ -14,11 +15,23 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class Home extends AppCompatActivity {
 
+    private Button button8;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_home);
+
+        button8=findViewById(R.id.button12);
+        button8.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Home.this,Admin.class);
+                startActivity(intent);
+            }
+        });
+
         CardView cardView = findViewById(R.id.cardView);
         cardView.setOnClickListener(new View.OnClickListener() {
             @Override
